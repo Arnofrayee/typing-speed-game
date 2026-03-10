@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Sora:wght@100..800&display=swap");
+* {
+	font-family: "sora";
+}
 :root {
 	--neutral900: #121212;
 	--neutral800: #262626;
@@ -9,6 +13,36 @@
 	--red500: #d64d5b;
 	--green500: #4dd67b;
 	--yellow400: #f4dc73;
+}
+.neutral900 {
+	color: var(--neutral900);
+}
+.neutral800 {
+	color: var(--neutral800);
+}
+.neutral500 {
+	color: var(--neutral500);
+}
+.neutral400 {
+	color: var(--neutral400);
+}
+.neutral0 {
+	color: var(--neutral0);
+}
+.blue600 {
+	color: var(--blue600);
+}
+.blue400 {
+	color: var(--blue400);
+}
+.red500 {
+	color: var(--red500);
+}
+.green500 {
+	color: var(--green500);
+}
+.yellow400 {
+	color: var(--yellow400);
 }
 .textPreset1 {
 	font-weight: 700;
@@ -42,35 +76,83 @@
 	font-weight: 400;
 	font-size: 20px;
 	line-height: 120%;
-	letter-spacing: -048px;
 }
 .textPreset3M {
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 120%;
-	letter-spacing: -048px;
 }
 .textPreset3Sb {
 	font-weight: 600;
 	font-size: 20px;
 	line-height: 120%;
-	letter-spacing: -0.3px;
 }
 .textPreset4 {
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 120%;
-	letter-spacing: -0.6px;
 }
 .textPreset5 {
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 120%;
-	letter-spacing: -0.48px;
 }
 .textPreset6 {
 	font-weight: 400;
 	font-size: 12px;
 	line-height: 120%;
 	letter-spacing: 0px;
+}
+.selectButton {
+	background: transparent;
+	color: var(--neutral0);
+	padding: 6px 10px;
+	border: 1px solid var(--neutral500);
+	border-radius: 8px;
+}
+.selectButton:hover {
+	color: var(--blue400);
+	border: 1px solid var(--blue400);
+	cursor: pointer;
+}
+.selectButton:focus {
+	color: var(--neutral0);
+	border: 1px solid var(--neutral0);
+	cursor: pointer;
+	box-shadow:
+		0px 0px 0px 3px var(--neutral900),
+		0px 0px 0px 6px var(--blue400);
+}
+.selectButton:active {
+	color: var(--blue400);
+	border: 1px solid var(--blue400);
+}
+.primaryButton {
+	background-color: var(--blue600);
+	padding: 16px 24px;
+	border-radius: 12px;
+	color: var(--neutral0);
+}
+.primaryButton:hover {
+	background-color: var(--blue400);
+	color: var(--neutral0);
+}
+.primarybutton:focus {
+	box-shadow:
+		0px 0px 0px 3px var(--neutral900),
+		0px 0px 0px 6px var(--blue400);
+}
+.secondaryButton {
+	background-color: var(--neutral0);
+	padding: 10px 16px;
+	border-radius: 12px;
+	color: var(--neutral900);
+}
+.secondaryButton:focus {
+	box-shadow:
+		0px 0px 0px 3px var(--neutral900),
+		0px 0px 0px 6px var(--blue400);
+}
+.secondaryButton:hover {
+	background-color: color-mix(in srgb, var(--neutral0) 90%, transparent);
 }
