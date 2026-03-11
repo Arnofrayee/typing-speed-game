@@ -1,76 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
 :root {
-	--neutral900: #121212;
-	--neutral800: #262626;
-	--neutral500: #717178;
-	--neutral400: #949497;
-	--neutral0: #ffffff;
-	--blue600: #177dff;
-	--blue400: #4ca6ff;
-	--red500: #d64d5b;
-	--green500: #4dd67b;
-	--yellow400: #f4dc73;
+  --neutral900: #121212;
+  --neutral800: #262626;
+  --neutral500: #717178;
+  --neutral400: #949497;
+  --neutral0: #ffffff;
+  --blue600: #177dff;
+  --blue400: #4ca6ff;
+  --red500: #d64d5b;
+  --green500: #4dd67b;
+  --yellow400: #f4dc73;
+}
+.neutral900 {
+  color: var(--neutral900);
+}
+.neutral800 {
+  color: var(--neutral800);
+}
+.neutral500 {
+  color: var(--neutral500);
+}
+.neutral400 {
+  color: var(--neutral400);
+}
+.neutral0 {
+  color: var(--neutral0);
+}
+.blue600 {
+  color: var(--blue600);
+}
+.blue400 {
+  color: var(--blue400);
+}
+.red500 {
+  color: var(--red500);
+}
+.green500 {
+  color: var(--green500);
+}
+.yellow400 {
+  color: var(--yellow400);
 }
 .textPreset1 {
-	font-weight: 700;
-	font-size: 40px;
-	line-height: 136%;
-	letter-spacing: 0.4px;
+  font-weight: 700;
+  font-size: 40px;
 }
 .textPreset1Bm {
-	font-weight: 700;
-	font-size: 24px;
-	line-height: 120px;
-	letter-spacing: 0.32px;
+  font-weight: 700;
+  font-size: 30.2px;
 }
 .textPreset1R {
-	font-weight: 400;
-	font-size: 40px;
-	line-height: 136%;
-	letter-spacing: 0.4px;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 136%;
 }
 .textPreset1Rm {
-	font-weight: 400;
-	font-size: 32px;
-	line-height: 136%;
-	letter-spacing: 0.4px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 136%;
 }
 .textPreset2B {
-	font-weight: 700;
-	font-size: 26px;
+  font-weight: 700;
+  font-size: 26px;
 }
 .textPreset3 {
-	font-weight: 400;
-	font-size: 20px;
-	line-height: 120%;
-	letter-spacing: -048px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
 }
 .textPreset3M {
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 120%;
-	letter-spacing: -048px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
 }
 .textPreset3Sb {
-	font-weight: 600;
-	font-size: 20px;
-	line-height: 120%;
-	letter-spacing: -0.3px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
 }
 .textPreset4 {
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 120%;
-	letter-spacing: -0.6px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
 }
 .textPreset5 {
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 120%;
-	letter-spacing: -0.48px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
 }
 .textPreset6 {
-	font-weight: 400;
-	font-size: 12px;
-	line-height: 120%;
-	letter-spacing: 0px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+}
+.selectButton {
+  background: transparent;
+  padding: 6px 10px;
+  border: 1px solid var(--neutral500);
+  color: var(--neutral0);
+  border-radius: 8px;
+}
+.selectButton:hover {
+  border: 1px solid var(--blue400);
+  color: var(--blue400);
+}
+.selectButton:active {
+  border: 1px solid var(--blue400);
+  color: var(--blue400);
+}
+.selectButton:focus {
+  border: 1px solid var(--neutral0);
+  box-shadow:
+    0px 0px 0px 2px var(--neutral900),
+    0px 0px 0px 4px var(--blue400);
+}
+.primaryButton {
+  background-color: var(--blue600);
+  padding: 16px 24px;
+  color: var(--neutral0);
+  border: none;
+  border-radius: 12px;
+}
+.primaryButton:hover {
+  background-color: var(--blue400);
+}
+.primaryButton:focus {
+  box-shadow:
+    0px 0px 0px 2px var(--neutral900),
+    0px 0px 0px 4px var(--blue400);
+}
+.secondaryButton {
+  background-color: var(--neutral0);
+  color: var(--neutral900);
+  padding: 10px 16px;
+  border-radius: 12px;
+}
+.secondaryButton:hover {
+  background-color: color-mix(in srgb, var(--neutral0) 90%, transparent);
+}
+.secondaryButton:focus {
+  box-shadow:
+    0px 0px 0px 2px var(--neutral900),
+    0px 0px 0px 4px var(--blue400);
+}
+body {
+  background-color: var(--neutral900);
+  font-family: "Sora";
 }
