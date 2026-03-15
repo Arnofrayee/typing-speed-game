@@ -59,11 +59,14 @@ main {
   padding: 0;
 }
 #backText {
+
   display: flex;
   padding: 20px;
   text-align: start;
+  flex-wrap: wrap;
+  gap: 10px;
 }
-.start1 {
+.start1[open] {
   position: absolute;
   inset: 0;
   max-width: 100%;
@@ -86,4 +89,23 @@ main {
     black 100%,
     transparent 100%
   );
+}
+.underline {
+  text-decoration: underline #D64D5B;
+}
+#typeTest {
+  position: absolute;
+  width: 100%;
+  top: 18px;
+  left: 20px;
+height: 100%;
+z-index: 10;
+background: transparent;
+opacity: 0;
+}
+.typeTestShow {
+  display: block;
+}
+.typeTestHide {
+  display: none;
 }
