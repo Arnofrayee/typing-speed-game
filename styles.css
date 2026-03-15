@@ -48,11 +48,12 @@ main {
   display: flex;
   gap: 10px;
 }
-.lastTopMainHr {
-  width: 100%;
+hr {
+  width: 90%;
   opacity: 50%;
   border: none;
   border-bottom: 1px solid currentColor;
+  align-self: center;
 }
 .main {
   position: relative;
@@ -65,6 +66,7 @@ main {
   text-align: start;
   flex-wrap: wrap;
   gap: 10px;
+  height: 500px;
 }
 .start1[open] {
   position: absolute;
@@ -98,14 +100,23 @@ main {
   width: 100%;
   top: 18px;
   left: 20px;
-height: 100%;
 z-index: 10;
 background: transparent;
 opacity: 0;
+height: 470px;
 }
 .typeTestShow {
   display: block;
 }
 .typeTestHide {
   display: none;
+}
+.bottomHrHide {
+  display: none;
+}
+.showBHR {
+  display: flex;
+}
+.bottomHr {
+  width: 100%;
 }

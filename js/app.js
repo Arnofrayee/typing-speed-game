@@ -194,6 +194,7 @@ const $startDialog = document.querySelector(".start1");
 const $backText = document.getElementById("backText");
 const $startTest = document.getElementById("startTest");
 const $area = document.getElementById("typeTest");
+const $bottomHr = document.querySelector(".bottomHr")
 const showWords = () => {
   let randomWords = [];
   for (let i = 0; i < 30; i++) {
@@ -223,23 +224,47 @@ $startTest.addEventListener("click", () => {
   $startDialog.close();
   $area.classList.remove("typeTestHide")
   $area.classList.add("typeTestShow")
+  $bottomHr.classList.remove("bottomHrHide")
+  $bottomHr.classList.add("showBHR")
   $area.focus()
+  startTimer()
 });
 let trackWords = 0
+let totalWords = 0
+let correctWords = 0
 $area.addEventListener("input", () => {
     if($area.value.at(-1) == " ") {
         if ($backText.children[trackWords].textContent == $area.value.trim()) {
             $backText.children[trackWords].classList.add("green500")
+            
+             correctWords++
         }
         else {
         $backText.children[trackWords].classList.add("red500", "underline")
         }
+        totalWords++;
         trackWords++;
+        if (trackWords == 30) {
+            showWords()
+            trackWords =0
+        }
+        $wpm.textContent = Math.round(correctWords / timeSpent * 60)
+        $acc.textContent = Math.round(correctWords / totalWords * 100) + "%"
         $area.value = ""
     }
 })
-let timeLeft = 60
+let timeSpent = 0
 let interval = null
-setInterval(() => {
-    timeLeft--
+function startTimer() {
+interval = setInterval(() => {
+    timeSpent++
+    $time.textContent = "0:0" + timeSpent
+    if (timeSpent == 60) {
+        clearInterval(interval)
+    }
+    if (timeSpent >= 10) {
+        $time.textContent = "0:" + timeSpent
+    }
 }, 1000) 
+}
+
