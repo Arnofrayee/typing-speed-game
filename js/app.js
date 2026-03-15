@@ -261,6 +261,9 @@ interval = setInterval(() => {
     $time.textContent = "0:0" + timeSpent
     if (timeSpent == 60) {
         clearInterval(interval)
+        document.querySelector("#endScreen .wpm").textContent = $wpm.textContent
+document.querySelector("#endScreen .acc").textContent = $acc.textContent
+document.getElementById("endScreen").showModal()
     }
     if (timeSpent >= 10) {
         $time.textContent = "0:" + timeSpent
