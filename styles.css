@@ -119,3 +119,18 @@ hr {
 .bottomHr {
 	width: 100%;
 }
+#endScreen[open] {
+	display: flex;
+	flex-direction: column;
+	background-color: #121212;
+	width: 100vw;
+	height: 100%;
+	border: none;
+}
+#endScreen::backdrop {
+	background-color: #121212;
+}
+#endScreen svg:nth-child(1) {
+	display: flex;
+	align-self: center;
+}
